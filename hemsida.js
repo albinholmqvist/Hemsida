@@ -39,31 +39,29 @@ const csvDataDiv = document.getElementById('csvData');
 
 let ordersData = [];
 
-// Funktion för att läsa in CSV-fil
 function loadCSV() {
-    fetch('ordrar.csv') // Hämta CSV-filen
+    fetch('ordrar.csv')
         .then(response => response.text())
         .then(data => {
-            const rows = data.split('\n'); // Dela upp rader
-            const headers = rows[0].split(','); // Anta att första raden är rubrikerna
+            const rows = data.split('\n');
+            const headers = rows[0].split(',').map(header => header.trim()); // Använd trim() för att ta bort onödiga mellanslag
             for (let i = 1; i < rows.length; i++) {
                 const currentRow = rows[i].split(',');
                 if (currentRow.length === headers.length) {
                     const order = {};
                     for (let j = 0; j < headers.length; j++) {
-                        order[headers[j]] = currentRow[j]; // Skapa objekt med rubrikerna som nycklar
+                        order[headers[j]] = currentRow[j].trim(); // Använd trim() för att ta bort onödiga mellanslag
                     }
                     ordersData.push(order);
                 }
             }
-            createOrderButtons(ordersData); // Anropa funktion för att skapa knappar
+            createOrderButtons(ordersData);
         })
         .catch(error => {
             console.error('Det gick inte att läsa in CSV-filen', error);
         });
 }
 
-// Funktion för att skapa knappar
 function createOrderButtons(data) {
     orderDisplay.innerHTML = '';
 
@@ -74,7 +72,6 @@ function createOrderButtons(data) {
     });
 }
 
-// Filtreringsfunktion
 searchInput.addEventListener('input', () => {
     const searchValue = searchInput.value.toLowerCase();
 
@@ -87,4 +84,5 @@ searchInput.addEventListener('input', () => {
     createOrderButtons(filteredOrders);
 });
 
-loadCSV(); // Ladda in CSV-filen vid start
+loadCSV();
+
