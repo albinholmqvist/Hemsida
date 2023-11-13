@@ -21,6 +21,7 @@ window.onload = () => {
                         ordersData.push(order);
                     }
                 }
+                createOrderButtons(ordersData); // Visa ordrarna när de är inlästa
             })
             .catch(error => {
                 console.error('Det gick inte att läsa in CSV-filen', error);
@@ -72,6 +73,7 @@ window.onload = () => {
         } else {
             isSearchActive = false;
             orderDisplay.innerHTML = '';
+            createOrderButtons(ordersData); // Återställ till alla ordrar när sökfältet är tomt
         }
     });
 
