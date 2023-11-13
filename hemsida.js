@@ -36,16 +36,16 @@ window.onload = () => {
             container.classList.add('order-item');
 
             const orderText = document.createElement('p');
-            orderText.innerHTML = `<strong>Order:</strong> ${order.Ordernummer}..`;
+            orderText.innerHTML = `<strong>Order:</strong> ${order.Ordernummer}`;
             container.appendChild(orderText);
 
-            const kundText = document.createElement('p');
-            kundText.innerHTML = `<em>Kund:</em> ${order.Kund}..`;
-            container.appendChild(kundText);
+            const customerText = document.createElement('p');
+            customerText.innerHTML = `<em>Kund:</em> ${order.Kund}`;
+            container.appendChild(customerText);
 
-            const adressText = document.createElement('p');
-            adressText.innerHTML = `<em>Adress:</em> ${order.Adress}..`;
-            container.appendChild(adressText);
+            const addressText = document.createElement('p');
+            addressText.innerHTML = `<em>Adress:</em> ${order.Adress}`;
+            container.appendChild(addressText);
 
             orderDisplay.appendChild(container);
         });
