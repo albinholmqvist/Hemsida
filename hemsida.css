@@ -94,3 +94,21 @@ img {
     width: 75px;
     height: auto; /* För att behålla proportionerna */
 }
+
+/* CSS för orderknappar */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e9e9e9;
+  }
+  
