@@ -1,7 +1,6 @@
 window.onload = () => {
     const orderDisplay = document.getElementById('orderDisplay');
     const searchInput = document.getElementById('searchInput');
-    const csvDataDiv = document.getElementById('csvData');
     let ordersData = [];
     let isSearchActive = false;
 
@@ -46,6 +45,14 @@ window.onload = () => {
             const addressText = document.createElement('p');
             addressText.innerHTML = `<em>Adress:</em> ${order.Adress}`;
             container.appendChild(addressText);
+
+            const registeredText = document.createElement('p');
+            registeredText.innerHTML = `<em>Registrerat:</em> ${order.Registrerat}`;
+            container.appendChild(registeredText);
+
+            const statusText = document.createElement('p');
+            statusText.innerHTML = `<em>Status:</em> ${order.Status}`;
+            container.appendChild(statusText);
 
             orderDisplay.appendChild(container);
         });
