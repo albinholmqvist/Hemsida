@@ -11,13 +11,6 @@
     <header>
         <a href="https://www.dinwebbplats.com">
             <img src="favicon.png" alt="Din Logga">
-            <style>
-                /* Stilmall för att göra loggan mindre */
-                img {
-                    width: 75px; /* Justera bredden enligt behov */
-                    height: auto; /* Låt höjden skaleras automatiskt */
-                }
-            </style>
         </a>
         <nav>
             <ul>
@@ -26,38 +19,36 @@
                 <li><a href="om.html">Om</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
         <h1>Välkommen till min test-hemsida</h1>
         <h2>Klicka runt vetja</h2>
         <p>Här testar jag olika funktioner.</p>
-<script src="hemsida.js"></script>
-    </body>
-<div id="orderDisplay" class="order-container">
-    <!-- Här kommer dina order att visas -->
-</div>
-<!-- Sökruta -->
-<input type="text" id="searchInput" placeholder="Sök efter ordernummer, adress eller kund">
 
-<!-- Container för att visa resultat -->
-<div id="orderDisplay" class="order-container">
-    <!-- Resultat visas här -->
-</div>
-<div id="csvData"></div>
+        <div id="orderDisplay" class="order-container">
+            <!-- Här kommer dina order att visas -->
+        </div>
 
-<script src="hemsida.js"></script>
-  
-<a href="services.html" class="btn">Tjänster</a>
+        <!-- Sökruta -->
+        <input type="text" id="searchInput" placeholder="Sök efter ordernummer, adress eller kund">
+
+        <!-- Container för att visa resultat -->
+        <div id="orderResult" class="order-container">
+            <!-- Resultat visas här -->
+        </div>
+
+        <div id="csvData"></div>
+
+        <a href="services.html" class="btn">Tjänster</a>
         <a href="om.html" class="btn">Om</a>
         <a href="index.html" class="btn">Hem</a>
     </main>
 
     <footer>
-        <p>&copy; 2023 Albin Holmqvist
-
-        </p>
+        <p>&copy; 2023 Albin Holmqvist</p>
     </footer>
+
+    <script src="hemsida.js"></script>
 </body>
 </html>
