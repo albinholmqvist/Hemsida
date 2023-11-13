@@ -2,7 +2,6 @@ window.onload = () => {
     const orderDisplay = document.getElementById('orderDisplay');
     const searchInput = document.getElementById('searchInput');
     const csvDataDiv = document.getElementById('csvData');
-
     let ordersData = [];
     let isSearchActive = false;
 
@@ -33,13 +32,22 @@ window.onload = () => {
         orderDisplay.innerHTML = '';
 
         data.forEach(order => {
-            const button = document.createElement('button');
-            button.textContent = `Order: ${order.Ordernummer}, Kund: ${order.Kund}, Adress: ${order.Adress}`;
-            orderDisplay.appendChild(button);
+            const container = document.createElement('div');
+            container.classList.add('order-item');
 
-            button.addEventListener('click', () => {
-                console.log(`Vald order: ${order.Ordernummer}`);
-            });
+            const orderText = document.createElement('p');
+            orderText.innerHTML = `<strong>Order:</strong> ${order.Ordernummer}..`;
+            container.appendChild(orderText);
+
+            const kundText = document.createElement('p');
+            kundText.innerHTML = `<em>Kund:</em> ${order.Kund}..`;
+            container.appendChild(kundText);
+
+            const adressText = document.createElement('p');
+            adressText.innerHTML = `<em>Adress:</em> ${order.Adress}..`;
+            container.appendChild(adressText);
+
+            orderDisplay.appendChild(container);
         });
     }
 
@@ -62,25 +70,3 @@ window.onload = () => {
 
     loadCSV();
 };
-function createOrderButtons(data) {
-    orderDisplay.innerHTML = '';
-
-    data.forEach(order => {
-        const container = document.createElement('div');
-        container.classList.add('order-item');
-
-        const orderText = document.createElement('p');
-        orderText.innerHTML = `<strong>Order:</strong> ${order.Ordernummer}..`;
-        container.appendChild(orderText);
-
-        const kundText = document.createElement('p');
-        kundText.innerHTML = `<em>Kund:</em> ${order.Kund}..`;
-        container.appendChild(kundText);
-
-        const adressText = document.createElement('p');
-        adressText.innerHTML = `<em>Adress:</em> ${order.Adress}..`;
-        container.appendChild(adressText);
-
-        orderDisplay.appendChild(container);
-    });
-}
