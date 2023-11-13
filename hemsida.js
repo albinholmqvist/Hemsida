@@ -62,3 +62,25 @@ window.onload = () => {
 
     loadCSV();
 };
+function createOrderButtons(data) {
+    orderDisplay.innerHTML = '';
+
+    data.forEach(order => {
+        const container = document.createElement('div');
+        container.classList.add('order-item');
+
+        const orderText = document.createElement('p');
+        orderText.innerHTML = `<strong>Order:</strong> ${order.Ordernummer}..`;
+        container.appendChild(orderText);
+
+        const kundText = document.createElement('p');
+        kundText.innerHTML = `<em>Kund:</em> ${order.Kund}..`;
+        container.appendChild(kundText);
+
+        const adressText = document.createElement('p');
+        adressText.innerHTML = `<em>Adress:</em> ${order.Adress}..`;
+        container.appendChild(adressText);
+
+        orderDisplay.appendChild(container);
+    });
+}
