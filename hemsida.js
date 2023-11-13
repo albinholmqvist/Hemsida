@@ -4,6 +4,7 @@ window.onload = () => {
     const csvDataDiv = document.getElementById('csvData');
 
     let ordersData = [];
+    let isSearchActive = false;
 
     function loadCSV() {
         fetch('ordrar.csv')
@@ -22,7 +23,6 @@ window.onload = () => {
                         ordersData.push(order);
                     }
                 }
-                createOrderButtons(ordersData);
             })
             .catch(error => {
                 console.error('Det gick inte att läsa in CSV-filen', error);
@@ -45,12 +45,19 @@ window.onload = () => {
 
     searchInput.addEventListener('input', () => {
         const searchValue = searchInput.value.toLowerCase();
-        const filteredOrders = ordersData.filter(order =>
-            order.Ordernummer.includes(searchValue) ||
-            order.Adress.toLowerCase().includes(searchValue) ||
-            order.Kund.toLowerCase().includes(searchValue)
-        );
-        createOrderButtons(filteredOrders);
+        
+        if (searchValue.length > 0) {
+            isSearchActive = true;
+            const filteredOrders = ordersData.filter(order =>
+                order.Ordernummer.includes(searchValue) ||
+                order.Adress.toLowerCase().includes(searchValue) ||
+                order.Kund.toLowerCase().includes(searchValue)
+            );
+            createOrderButtons(filteredOrders);
+        } else {
+            isSearchActive = false;
+            orderDisplay.innerHTML = '';
+        }
     });
 
     loadCSV();
