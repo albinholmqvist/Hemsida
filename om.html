@@ -18,9 +18,26 @@
         </style>
     </head>
     <body>
-        <input type="text" id="searchInput" placeholder="Sök efter ordernummer...">
-        <div id="searchResult"></div>
-    
-        <script src="hemsida.js"></script>
+       <!-- Sökruta -->
+       <input type="text" id="searchInput" placeholder="Sök efter ordernummer, adress eller kund">
+       <div id="orderDisplay" class="order-container">
+           <!-- Här kommer dina order att visas -->
+       </div>
+       <!-- Container för att visa resultat -->
+       <div id="orderResult" class="order-container">
+           <!-- Resultat visas här -->
+       </div>
+
+       <div id="csvData"></div>
+
+       <a href="services.html" class="btn">Tjänster</a>
+       <a href="om.html" class="btn">Om</a>
+       <a href="index.html" class="btn">Hem</a>
+
+   <footer>
+       <p>&copy; 2023 Albin Holmqvist</p>
+   </footer>
+
+   <script src="hemsida.js"></script>
     </body>
 </html>
