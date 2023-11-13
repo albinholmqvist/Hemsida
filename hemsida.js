@@ -1,6 +1,7 @@
 window.onload = () => {
     const orderDisplay = document.getElementById('orderDisplay');
     const searchInput = document.getElementById('searchInput');
+    const csvDataDiv = document.getElementById('csvData');
     let ordersData = [];
     let isSearchActive = false;
 
@@ -21,7 +22,6 @@ window.onload = () => {
                         ordersData.push(order);
                     }
                 }
-                createOrderButtons(ordersData); // Visa ordrarna när de är inlästa
             })
             .catch(error => {
                 console.error('Det gick inte att läsa in CSV-filen', error);
@@ -47,13 +47,13 @@ window.onload = () => {
             addressText.innerHTML = `<em>Adress:</em> ${order.Adress}`;
             container.appendChild(addressText);
 
-            const registeredText = document.createElement('p');
-            registeredText.innerHTML = `<em>Registrerat:</em> ${order.Registrerat}`;
-            container.appendChild(registeredText);
+            const phoneText = document.createElement('p');
+            phoneText.innerHTML = `<em>Telefonnummer:</em> ${order.Telefonnummer}`;
+            container.appendChild(phoneText);
 
-            const statusText = document.createElement('p');
-            statusText.innerHTML = `<em>Status:</em> ${order.Status}`;
-            container.appendChild(statusText);
+            const descriptionText = document.createElement('p');
+            descriptionText.innerHTML = `<em>Beskrivning:</em> ${order.Beskrivning}`;
+            container.appendChild(descriptionText);
 
             orderDisplay.appendChild(container);
         });
@@ -67,13 +67,14 @@ window.onload = () => {
             const filteredOrders = ordersData.filter(order =>
                 order.Ordernummer.includes(searchValue) ||
                 order.Adress.toLowerCase().includes(searchValue) ||
-                order.Kund.toLowerCase().includes(searchValue)
+                order.Kund.toLowerCase().includes(searchValue) ||
+                order.Telefonnummer.includes(searchValue) ||
+                order.Beskrivning.toLowerCase().includes(searchValue)
             );
             createOrderButtons(filteredOrders);
         } else {
             isSearchActive = false;
             orderDisplay.innerHTML = '';
-            createOrderButtons(ordersData); // Återställ till alla ordrar när sökfältet är tomt
         }
     });
 
