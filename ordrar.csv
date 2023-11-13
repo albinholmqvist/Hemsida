@@ -1,21 +1,21 @@
-Ordernummer,Adress,Kund,Registrerat,Status
-123456,Gatan 1,Albin Sjöberg,2023-10-02,Aktiv
-234567,Skogsgatan 12,Elin Karlsson,2023-09-15,Avslutad
-345678,Ängsvägen 5,Olle Andersson,2023-08-23,Pågående
-456789,Strandvägen 9,Anna Johansson,2023-07-30,Avslutad
-567890,Björkvägen 3,Gustav Nilsson,2023-06-18,Aktiv
-678901,Sjövägen 7,Linnéa Eriksson,2023-05-27,Aktiv
-789012,Äppelgatan 21,Ludvig Pettersson,2023-04-29,Pågående
-890123,Rosvägen 8,Fanny Svensson,2023-03-14,Avslutad
-901234,Lundagatan 15,Maximilian Gustafsson,2023-02-02,Pågående
-101112,Östervägen 11,Ebba Lindström,2023-01-06,Aktiv
-111213,Gårdsvägen 4,Isak Håkansson,2022-12-18,Aktiv
-121314,Bostadsvägen 19,Klara Lundqvist,2022-11-25,Pågående
-131415,Höjdvägen 2,Noah Berg,2022-10-30,Avslutad
-141516,Sandbackavägen 16,Alva Dahl,2022-09-16,Avslutad
-151617,Boplatsgatan 10,Hannes Holm,2022-08-03,Pågående
-161718,Sjöhagavägen 3,Signe Nyström,2022-07-15,Aktiv
-171819,Kärrvägen 6,Märta Månsson,2022-06-25,Aktiv
-181920,Höjdvägen 22,Elsa Lundin,2022-05-28,Pågående
-192021,Björkvägen 14,Wilhelm Fredriksson,2022-04-19,Avslutad
-202122,Ängsvägen 20,Saga Sjöström,2022-03-14,Avslutad
+Ordernummer,Adress,Kund,Registrerat,Status,Telefonnummer,Beskrivning
+123456,Gatan 1,Albin Sjöberg,2023-10-02,Aktiv,1234567890,Hej, mitt element är kallt kan ni komma och kolla?
+234567,Skogsgatan 12,Elin Karlsson,2023-09-15,Avslutad,2345678901,Kan ni kolla min tvättmaskin?
+345678,Ängsvägen 5,Olle Andersson,2023-08-23,Pågående,3456789012,Mitt element funkar inte, det är kallt.
+456789,Strandvägen 9,Anna Johansson,2023-07-30,Avslutad,4567890123,Jag behöver hjälp med mitt badrum.
+567890,Björkvägen 3,Gustav Nilsson,2023-06-18,Aktiv,5678901234,Köket är trasigt.
+678901,Sjövägen 7,Linnéa Eriksson,2023-05-27,Aktiv,6789012345,Min dusch fungerar inte.
+789012,Äppelgatan 21,Ludvig Pettersson,2023-04-29,Pågående,7890123456,Jag behöver hjälp med mitt element.
+890123,Rosvägen 8,Fanny Svensson,2023-03-14,Avslutad,8901234567,Problem med mitt varmvatten.
+901234,Lundagatan 15,Maximilian Gustafsson,2023-02-02,Pågående,9012345678,Kan ni kolla min ugn?
+101112,Östervägen 11,Ebba Lindström,2023-01-06,Aktiv,1011121314,Mitt kylskåp är trasigt.
+111213,Gårdsvägen 4,Isak Håkansson,2022-12-18,Aktiv,1112131415,Mitt fönster funkar inte.
+121314,Bostadsvägen 19,Klara Lundqvist,2022-11-25,Pågående,1213141516,Jag behöver hjälp med min spis.
+131415,Höjdvägen 2,Noah Berg,2022-10-30,Avslutad,1314151617,Problem med min belysning.
+141516,Sandbackavägen 16,Alva Dahl,2022-09-16,Avslutad,1415161718,Jag behöver hjälp med mitt kök.
+151617,Boplatsgatan 10,Hannes Holm,2022-08-03,Pågående,1516171819,Problem med mitt vatten.
+161718,Sjöhagavägen 3,Signe Nyström,2022-07-15,Aktiv,1617181920,Kan ni kolla min toalett?
+171819,Kärrvägen 6,Märta Månsson,2022-06-25,Aktiv,1718192021,Mitt element är trasigt.
+181920,Höjdvägen 22,Elsa Lundin,2022-05-28,Pågående,1819202122,Jag behöver hjälp med min dörr.
+192021,Björkvägen 14,Wilhelm Fredriksson,2022-04-19,Avslutad,1920212223,Mitt badrum fungerar inte.
+202122,Ängsvägen 20,Saga Sjöström,2022-03-14,Avslutad,2021222324,Problem med min spis.
