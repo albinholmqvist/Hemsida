@@ -1,4 +1,7 @@
 Namn,Roll,Kontakt
-Namn Medarbetare 1,Roll Medarbetare 1,Telefonnummer / E-post
-Namn Medarbetare 2,Roll Medarbetare 2,Telefonnummer / E-post
-Namn Medarbetare 3,Roll Medarbetare 3,Telefonnummer / E-post
+Anna Andersson,Projektledare,070-1234567 / anna.andersson@example.com
+Bengt Bergström,Utvecklare,071-2345678 / bengt.bergstrom@example.com
+Caroline Carlsson,Designer,072-3456789 / caroline.carlsson@example.com
+David Dahlqvist,Testare,073-4567890 / david.dahlqvist@example.com
+Elin Eriksson,Säljare,074-5678901 / elin.eriksson@example.com
+
