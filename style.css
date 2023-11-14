@@ -133,3 +133,23 @@ button:hover {
   cursor: pointer;
   margin-top: 10px;
 }
+
+.test:hover {
+  background-color: rgb(245, 160, 160);
+  color: rgba(255, 255, 255, 0.521);
+  width: 105px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.test:active {
+  background-color: rgb(36, 28, 28);
+  color: rgba(255, 255, 255, 0.521);
+  width: 105px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
