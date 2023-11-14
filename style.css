@@ -129,4 +129,5 @@ button:hover {
   height: 36px;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
