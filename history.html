@@ -31,37 +31,9 @@
     <main>
         <h1>Återuppföljning och KPI:er</h1>
 
-        <!-- KPI-sektion -->
-        <section class="kpi-section">
-            <h2>Centrala KPI:er</h2>
-            <!-- Lägg till dina KPI-element här -->
-            <div class="kpi-item">
-                <h3>KPI 1</h3>
-                <p>Beskrivning av KPI 1 och dess värde.</p>
-            </div>
-            <div class="kpi-item">
-                <h3>KPI 2</h3>
-                <p>Beskrivning av KPI 2 och dess värde.</p>
-            </div>
-        </section>
-
         <!-- Medarbetare-sektion -->
-        <section class="medarbetare-section">
+        <section class="medarbetare-section" id="medarbetareSection">
             <h2>Våra Medarbetare</h2>
-            <!-- Lägg till dina medarbetarkort här -->
-            <div class="medarbetare-card">
-                <div class="medarbetare-avatar">
-                    <img src="medarbetare1.jpg" alt="Medarbetare 1">
-                </div>
-                <div class="medarbetare-info">
-                    <h3>Namn Medarbetare 1</h3>
-                    <p>Roll: Roll Medarbetare 1</p>
-                    <p>Kontakt: Telefonnummer / E-post</p>
-                </div>
-            </div>
-            <div class="medarbetare-card">
-                <!-- Upprepa för varje medarbetare -->
-            </div>
         </section>
     </main>
 
@@ -69,5 +41,8 @@
     <footer>
         <p>&copy; 2023 Albin Holmqvist</p>
     </footer>
+
+    <!-- JavaScript för att hämta data från CSV och generera medarbetarkort -->
+    <script src="medarbetare.js"></script>
 </body>
 </html>
