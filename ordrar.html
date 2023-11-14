@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hemsida.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Ordrar</title>
+</head>
+<body>
+    <header>
+        <a href="https://albinholmqvist.github.io/site/om.html" id="logo">
+            <img src="favicon.png" alt="Logga">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="services.html">Tjänster</a></li>
+                <li><a href="om.html">Om</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Sökruta -->
+        <input type="text" id="searchInput" placeholder="Sök efter ordernummer, adress eller kund">
+        <div id="orderDisplay" class="order-container">
+            <!-- Här kommer dina order att visas -->
+        </div>
+        <!-- Container för att visa resultat -->
+        <div id="orderResult" class="order-container">
+            <!-- Resultat visas här -->
+        </div>
+
+
+        <div id="csvData"></div>
+        <script src="hemsida.js"></script>
+    </body>
+    </html>
