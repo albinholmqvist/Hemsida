@@ -49,6 +49,27 @@ document.addEventListener('DOMContentLoaded', function () {
         card.appendChild(info);
 
         medarbetareSection.appendChild(card);
+        data.forEach(employee => {
+            const container = document.createElement('div');
+            container.classList.add('employee-card');
+
+            const nameText = document.createElement('p');
+            nameText.textContent = `Namn: ${employee.Namn}`;
+            container.appendChild(nameText);
+
+            const roleText = document.createElement('p');
+            roleText.textContent = `Roll: ${employee.Roll}`;
+            container.appendChild(roleText);
+
+            const contactLink = document.createElement('p');
+            const contactInfo = employee.Kontakt.split(' / '); // Dela upp telefonnummer och e-post
+            const phoneLink = `<a href="tel:${contactInfo[0]}">${contactInfo[0]}</a>`;
+            const emailLink = `<a href="mailto:${contactInfo[1]}">${contactInfo[1]}</a>`;
+            contactLink.innerHTML = `Kontakt: ${phoneLink} / ${emailLink}`;
+            container.appendChild(contactLink);
+
+            document.getElementById('employeeDisplay').appendChild(container);
+        });
     }
 
     loadCSV();

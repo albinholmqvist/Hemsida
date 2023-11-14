@@ -162,3 +162,21 @@ button:hover {
 }
 
 /* Lägg till fler stilar och anpassningar här baserat på ditt behov */
+/* Din befintliga CSS för medarbetarsidan */
+
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.employee-card p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.employee-card a {
+    color: #007bff; /* Färg för klickbara länkar, du kan ändra detta efter behov */
+    text-decoration: none;
+}
