@@ -85,3 +85,16 @@ window.onload = () => {
 document.getElementById('menu-icon').addEventListener('click', function () {
     document.getElementById('nav-menu').classList.toggle('show');
 });
+
+window.onload = () => {
+    const container = document.getElementById('externalContent');
+
+    fetch('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2')
+        .then(response => response.text())
+        .then(data => {
+            container.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Det gick inte att hämta innehållet', error);
+        });
+};
