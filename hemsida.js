@@ -80,3 +80,7 @@ window.onload = () => {
 
     loadCSV();
 };
+
+document.getElementById('menu-icon').addEventListener('click', function () {
+    document.getElementById('nav-menu').classList.toggle('show');
+});

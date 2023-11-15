@@ -192,3 +192,79 @@ button:hover {
     line-height: 0px;
     padding: 0px;
 }
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#logo img {
+    width: 75px;
+    height: auto;
+}
+
+#menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+#nav-menu {
+    display: flex;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav-menu li {
+    margin: 0 15px;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #nav-menu li {
+        margin: 10px 0;
+    }
+
+    #menu-icon {
+        display: flex;
+    }
+}
