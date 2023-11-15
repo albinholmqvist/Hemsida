@@ -189,4 +189,6 @@ button:hover {
     vertical-align: middle;
     width: 100%;
     text-align: center;
+    line-height: 0px;
+    padding: 0px;
 }
