@@ -50,6 +50,7 @@ window.onload = () => {
             const phoneText = document.createElement('p');
             phoneText.innerHTML = `<em>Telefonnummer:</em> ${order.Telefonnummer}`;
             container.appendChild(phoneText);
+              /* lägg till hyperlänk här */
 
             const descriptionText = document.createElement('p');
             descriptionText.innerHTML = `<em>Beskrivning:</em> ${order.Beskrivning}`;
