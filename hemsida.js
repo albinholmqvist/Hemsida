@@ -98,3 +98,22 @@ window.onload = () => {
             console.error('Det gick inte att hämta innehållet', error);
         });
 };
+const express = require('express');
+const axios = require('axios');
+
+const app = express();
+const port = 3000;
+
+app.get('/getExternalData', async (req, res) => {
+  try {
+    const response = await axios.get('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2');
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
