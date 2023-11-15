@@ -14,8 +14,8 @@
         <nav>
             <ul>
                 <li><a href="hemsida.html">Hem</a></li>
-                <li><a href="services.html">Tjänster</a></li>
-                <li><a href="history.html">Om</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="history.html">Historik</a></li>
             </ul>
         </nav>
     </header>
@@ -26,19 +26,19 @@
             // Använd jQuery för att ladda innehållet från den externa webbplatsen
             $('#externaInnehallet').load('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2');
         });
+
         window.onload = () => {
-            const container = document.getElementById('externalContent');
+            const container = document.getElementById('externaInnehallet');
 
             fetch('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2')
-               .then(response => response.text())
-               .then(data => {
-                   container.innerHTML = data;
+                .then(response => response.text())
+                .then(data => {
+                    container.innerHTML = data;
                 })
                 .catch(error => {
                     console.error('Det gick inte att hämta innehållet', error);
-                 });
+                });
         };
-
     </script>
 </body>
 </html>
