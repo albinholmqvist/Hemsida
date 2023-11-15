@@ -1,0 +1,22 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hemsida.css">
+    <title>Min Webbplats</title>
+    <!-- Lägg till jQuery från CDN (Content Delivery Network) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div id="externaInnehallet"></div>
+
+    <script>
+        $(document).ready(function () {
+            // Använd jQuery för att ladda innehållet från den externa webbplatsen
+            $('#externaInnehallet').load('https://www.google.com');
+        });
+    </script>
+</body>
+</html>
