@@ -27,17 +27,17 @@
             $('#externaInnehallet').load('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2');
         });
         window.onload = () => {
-    const container = document.getElementById('externalContent');
+            const container = document.getElementById('externalContent');
 
-    fetch('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2')
-        .then(response => response.text())
-        .then(data => {
-            container.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Det gick inte att hämta innehållet', error);
-        });
-};
+            fetch('https://tst-fsmobile.kfast.se/UbwtestEster-mobile/serviceorders/assignment/740000/2')
+               .then(response => response.text())
+               .then(data => {
+                   container.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Det gick inte att hämta innehållet', error);
+                 });
+        };
 
     </script>
 </body>
